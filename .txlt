@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bitácora eGrow</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: white;
+        }
+        
+        .page {
+            width: 8.5in;
+            min-height: 11in;
+            margin: 0 auto 40px;
+            padding: 40px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            background: white;
+            page-break-after: always;
+        }
+        
+        .page-1 {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            text-align: left;
+        }
+        
+        .header-line {
+            border-left: 4px solid #333;
+            padding-left: 15px;
+            margin-bottom: 60px;
+        }
+        
+        .title {
+            font-size: 18px;
+            font-weight: bold;
+            margin: 0;
+        }
+        
+        .subtitle {
+            font-size: 14px;
+            font-style: italic;
+            color: #666;
+            margin: 5px 0 0 0;
+        }
+        
+        .logo-section {
+            text-align: center;
+            margin: 100px 0;
+        }
+        
+        .logo {
+            font-size: 120px;
+            font-weight: 300;
+            margin: 0;
+            color: #333;
+        }
+        
+        .footer-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+        
+        .left-info {
+            flex: 1;
+        }
+        
+        .right-info {
+            text-align: right;
+            font-size: 12px;
+            color: #666;
+        }
+        
+        .info-line {
+            margin: 5px 0;
+            font-size: 14px;
+        }
+        
+        /* Página 2 */
+        .page-2 {
+            position: relative;
+        }
+        
+        .page-2-header {
+            height: 120px;
+            background: linear-gradient(135deg, #87CEEB 0%, #B0E0E6 100%);
+            margin: -40px -40px 40px -40px;
+            position: relative;
+            border-radius: 0 0 50px 0;
+        }
+        
+        .page-2-header::after {
+            content: 'e';
+            position: absolute;
+            top: 20px;
+            right: 40px;
+            font-size: 48px;
+            color: white;
+            font-weight: 300;
+        }
+        
+        .content-lines {
+            line-height: 2.5;
+            min-height: 400px;
+        }
+        
+        .content-section {
+            margin-bottom: 30px;
+        }
+        
+        .section-title {
+            font-weight: bold;
+            font-size: 16px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        
+        .section-content {
+            margin-left: 20px;
+            line-height: 1.6;
+        }
+        
+        .page-2-footer {
+            position: absolute;
+            bottom: 40px;
+            left: 40px;
+            right: 40px;
+            display: flex;
+            justify-content: space-between;
+            font-size: 12px;
+            color: #666;
+        }
+        
+        .bullet-list {
+            margin-left: 20px;
+        }
+        
+        .bullet-list li {
+            margin-bottom: 8px;
+        }
+        
+        @media print {
+            .page {
+                box-shadow: none;
+                margin: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- PÁGINA 1 - PORTADA -->
+    <div class="page page-1">
+        <div class="header-line">
+            <div class="title">[TÍTULO_DEL_DOCUMENTO]</div>
+            <div class="subtitle">Documento Interno</div>
+        </div>
+        
+        <div class="logo-section">
+            <div class="logo">eGrow</div>
+        </div>
+        
+        <div class="footer-info">
+            <div class="left-info">
+                <div class="info-line"><strong>Elaboró:</strong> [NOMBRE, APELLIDO] - [POSICIÓN]</div>
+                <div class="info-line"><strong>Fecha:</strong> [FECHA DE ELABORACIÓN]</div>
+            </div>
+            <div class="right-info">
+                <div><strong>Versión:</strong> V [X.X]</div>
+                <div><strong>Última fecha de modificación:</strong> [FECHA]</div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- PÁGINA 2 - CONTENIDO -->
+    <div class="page page-2">
+        <div class="page-2-header"></div>
+        
+        <div class="content-section">
+            <div class="section-title">Resumen Ejecutivo:</div>
+            <div class="section-content">
+                [CONTENIDO_RESUMEN_EJECUTIVO]
+            </div>
+        </div>
+        
+        <div class="content-section">
+            <div class="section-title">Contexto del Proyecto:</div>
+            <div class="section-content">
+                [CONTENIDO_CONTEXTO]
+            </div>
+        </div>
+        
+        <div class="content-section">
+            <div class="section-title">Objetivos del Proyecto:</div>
+            <div class="section-content">
+                <strong>• Objetivo Principal:</strong> [OBJETIVO_PRINCIPAL]<br><br>
+                <strong>• Metas Concretas:</strong>
+                <ul class="bullet-list">
+                    <li>[META_1]</li>
+                    <li>[META_2]</li>
+                    <li>[META_3]</li>
+                    <li>[META_4]</li>
+                    <li>[META_5]</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="content-section">
+            <div class="section-title">Alcance del Proyecto:</div>
+            <div class="section-content">
+                <strong>• Incluye:</strong>
+                <ul class="bullet-list">
+                    <li>[INCLUYE_1]</li>
+                    <li>[INCLUYE_2]</li>
+                    <li>[INCLUYE_3]</li>
+                </ul>
+                <br>
+                <strong>• No Incluye:</strong>
+                <ul class="bullet-list">
+                    <li>[NO_INCLUYE_1]</li>
+                    <li>[NO_INCLUYE_2]</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="page-2-footer">
+            <div>Documento Interno | eGrow [AÑO]</div>
+            <div>2</div>
+        </div>
+    </div>
+</body>
+</html>
